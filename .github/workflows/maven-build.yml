@@ -13,6 +13,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    env:
+      ghcrio_username: kwonghung.yip@gmail.com
+      ghcrio_password: ${{ secrets.package_repo_token }}
 
     steps:
     - uses: actions/checkout@v2

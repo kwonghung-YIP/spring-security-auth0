@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      GHCRIO_UASENAME: kwonghung.yip@gmail.com
-      GHCRIO_PASSWORD: ${{ secrets.ghcr_io_token }}
+      GHCRIO_UASENAME: ${{ github.actor }}
+      GHCRIO_PASSWORD: ${{ secrets.GHCR_IO_TOKEN }}
       
     steps:
     - uses: actions/checkout@v2

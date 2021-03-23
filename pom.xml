@@ -73,7 +73,13 @@
 				<version>2.8.0</version>
 				<configuration>
 				<to>
-					<image>docker.io/kwonghung/spring-security-auth0</image>
+					<!--<image>docker.io/kwonghung/spring-security-auth0</image>-->
+					<image>ghcr.io/kwonghung-yip/spring-security-auth0</image>
+					<tags>v1.0.1</tags>
+					<auth>
+						<username>${env.ghcrio_username}</username>
+						<password>${env.ghcrio_password}</password>
+					</auth>
 				</to>
 				</configuration>
 			</plugin>

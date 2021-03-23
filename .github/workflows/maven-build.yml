@@ -16,8 +16,8 @@ jobs:
     
     env:
       GHCRIO_UASENAME: kwonghung.yip@gmail.com
-      GHCRIO_PASSWORD: ${{ secrets.PACKAGE_REPO_TOKEN }}
-
+      GHCRIO_PASSWORD: 78de9362188777b01b74f0ddf2aaed2cba0e6fec
+      
     steps:
     - uses: actions/checkout@v2
 

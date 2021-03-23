@@ -13,12 +13,26 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    env:
+      ghcrio_username: kwonghung.yip@gmail.com
+      ghcrio_password: ${{ secrets.PACKAGE_REPO_TOKEN }}
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Set up JDK 11 LTS
       uses: actions/setup-java@v1
       with:
         java-version: 11
+  
+    - name: Cache maven dependencies
+      uses: actions/cache@v2.1.4
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+  
     - name: Build with Maven
       run: mvn -B compile jib:build --file pom.xml

@@ -77,8 +77,8 @@
 					<image>ghcr.io/kwonghung-yip/spring-security-auth0</image>
 					<tags>v1.0.1</tags>
 					<auth>
-						<username>${env.ghcrio_username}</username>
-						<password>${env.ghcrio_password}</password>
+						<username>${env.GHCRIO_USERNAME}</username>
+						<password>${env.GHCRIO_PASSWORD}</password>
 					</auth>
 				</to>
 				</configuration>

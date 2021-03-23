@@ -16,7 +16,7 @@ jobs:
     
     env:
       ghcrio_username: kwonghung.yip@gmail.com
-      ghcrio_password: ${{ secrets.package_repo_token }}
+      ghcrio_password: ${{ secrets.PACKAGE_REPO_TOKEN }}
 
     steps:
     - uses: actions/checkout@v2

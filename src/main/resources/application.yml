@@ -1,3 +1,4 @@
+---
 spring:
   security:    oauth2:      client:              registration:          auth0:
             client-name: auth0.com
@@ -18,3 +19,9 @@ logging:
     root: info
     #org.springframework: debug
     #org.springframework.security.oauth2: debug
+    
+---
+spring:
+  profiles: k8s
+  
+server:  http2:    enabled: true

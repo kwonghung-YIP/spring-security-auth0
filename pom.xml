@@ -73,13 +73,19 @@
 				<version>2.8.0</version>
 				<configuration>
 				<to>
-					<!--<image>docker.io/kwonghung/spring-security-auth0</image>-->
-					<image>ghcr.io/kwonghung-yip/spring-security-auth0</image>
 					<tags>v1.0.1</tags>
+					<image>docker.io/kwonghung/spring-security-auth0</image>
+					<auth>
+						<username>${env.DOCKERHUB_USERNAME}</username>
+						<password>${env.DOCKERHUB_PASSWORD}</password>
+					</auth>					
+					<!-- 
+					<image>ghcr.io/kwonghung-yip/spring-security-auth0</image>					
 					<auth>
 						<username>${env.GHCRIO_USERNAME}</username>
 						<password>${env.GHCRIO_PASSWORD}</password>
 					</auth>
+					-->
 				</to>
 				</configuration>
 			</plugin>

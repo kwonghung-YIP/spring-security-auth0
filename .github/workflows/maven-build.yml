@@ -17,6 +17,8 @@ jobs:
     env:
       GHCRIO_UASENAME: ${{ github.actor }}
       GHCRIO_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCEKRHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
       
     steps:
     - uses: actions/checkout@v2

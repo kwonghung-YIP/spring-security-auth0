@@ -1,13 +1,19 @@
 ---
 spring:
-  security:    oauth2:      client:              registration:          auth0:
+  security:
+    oauth2:
+      client:      
+        registration:
+          auth0:
             client-name: auth0.com
             client-id: 05pyqADP35YvmZms9PWPLzCOaSP4elrF
             client-secret: WhKr_qtaeWtCWhuqFa5U0CQyPPgtmMhPOvgsEFDqHr3gkd525SeQi0FRcMcjb342
-            scope:            - openid
+            scope:
+            - openid
             - profile
             - email
-        provider:          auth0:
+        provider:
+          auth0:
             issuer-uri: https://dev-jkd6ttlt.us.auth0.com/
             #authorization-uri: 
             #token-uri: 
@@ -22,6 +28,11 @@ logging:
     
 ---
 spring:
-  profiles: k8s
+  config:
+    activate:
+      on-profile: k8s
   
-server:  http2:    enabled: true
+server:
+  http2:
+    enabled: true
+  
